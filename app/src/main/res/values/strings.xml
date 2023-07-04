@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">P08 problem statement</string>
+    <string name="songHeader">Song title</string>
+    <string name="songHint">Enter song title</string>
+    <string name="singerHeader">Singers</string>
+    <string name="singerHint">Enter singer(S) name</string>
+    <string name="yearHeader">Year</string>
+    <string name="yearHint">Enter the year</string>
+    <string name="ratingHeader">Rating</string>
+    <string name="btnInsert">Insert song</string>
+    <string name="btnView">View list</string>
+    <string name="btnBack">Back</string>
+</resources>
