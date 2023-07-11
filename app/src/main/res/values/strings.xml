@@ -10,4 +10,6 @@
     <string name="btnInsert">Insert song</string>
     <string name="btnView">View list</string>
     <string name="btnBack">Back</string>
+    <string name="btnShowStar">SHOW ALL SONGS WITH 5 STAR</string>
+    <string name="songID">Song ID</string>
 </resources>

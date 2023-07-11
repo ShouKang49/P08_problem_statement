@@ -13,6 +13,9 @@
         android:theme="@style/Theme.P08ProblemStatement"
         tools:targetApi="31">
         <activity
+            android:name=".MaintainSong"
+            android:exported="false" />
+        <activity
             android:name=".songDisplayActivity"
             android:exported="false" />
         <activity
