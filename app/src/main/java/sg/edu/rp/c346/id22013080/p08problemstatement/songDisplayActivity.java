@@ -16,6 +16,7 @@ public class songDisplayActivity extends AppCompatActivity {
 
     ListView lv;
     ArrayList<Song> listedSongs;
+    CustomAdapter adapter;
 
     Button back, btnShowStars;
 
@@ -32,13 +33,16 @@ public class songDisplayActivity extends AppCompatActivity {
         listedSongs = new ArrayList<Song>();
 
 
-        ArrayAdapter allSongs = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listedSongs);
-        lv.setAdapter(allSongs);
+        //ArrayAdapter allSongs = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listedSongs);
+        //lv.setAdapter(allSongs);
+
+        adapter = new CustomAdapter(songDisplayActivity.this, R.layout.row, listedSongs);
+        lv.setAdapter(adapter);
 
         DBHelper db = new DBHelper(songDisplayActivity.this);
         listedSongs.clear();
         listedSongs.addAll(db.getSong());
-        allSongs.notifyDataSetChanged();
+        adapter.notifyDataSetChanged();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +71,7 @@ public class songDisplayActivity extends AppCompatActivity {
                 listedSongs.clear();
                 listedSongs.addAll(db.getSong(starsNeeded));
 
-                allSongs.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
             }
         });
     }
